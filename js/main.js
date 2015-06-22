@@ -691,6 +691,16 @@ window.requestAnimFrame = (function(callback) {
         mousePos.y = pos.y;
       });
 
+      canvas.addEventListener('touchStart', function(evt) {
+        var pos = getMousePos(canvas, evt);
+          mousePos.x = pos.x;
+          mousePos.y = pos.y;
+      });
+    
+      canvas.addEventListener('touchLeave', function(evt) {
+          mousePos.x = mousePos.y = 9999;
+      });
+    
       canvas.addEventListener('mouseout', function(evt) {
         mousePos.x = 9999;
         mousePos.y = 9999;
