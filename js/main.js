@@ -665,6 +665,23 @@ window.requestAnimFrame = (function(callback) {
       var red = '#EF2B36';
       var yellow = '#FFC636';
       var green = '#02A817';
+      tx.defaultValue = "Google";      /*
+       * set mouse position really far away
+       * so the mouse forces are nearly obsolete
+       */
+      var mousePos = {
+        x: 9999,
+        y: 9999
+      };
+      var s = tx.value;
+      s = s.toUpperCase();
+      var x = 100, y = 50;
+      for(var i=0;i<s.length;++i)
+      {
+        trolls=trolls.concat(createAlpha(s.charAt(i), x+i*90,y, getRandomColor()));
+      }
+      animate(canvas, time, mousePos, trolls);
+      
       tx.addEventListener('change', function() {
           var s = tx.value;
           s = s.toUpperCase();
@@ -681,14 +698,7 @@ window.requestAnimFrame = (function(callback) {
           animate(canvas, time, mousePos, trolls);
       });
       
-      /*
-       * set mouse position really far away
-       * so the mouse forces are nearly obsolete
-       */
-      var mousePos = {
-        x: 9999,
-        y: 9999
-      };
+
 
       canvas.addEventListener('mousemove', function(evt) {
         var pos = getMousePos(canvas, evt);
