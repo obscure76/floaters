@@ -358,7 +358,6 @@ window.requestAnimFrame = (function(callback) {
               trolls.push(new Ball(x+40, y, 0, 0, color));
               trolls.push(new Ball(x+60, y, 0, 0, color));
               trolls.push(new Ball(x+40, y, 0, 0, color));
-              trolls.push(new Ball(x, y+120, 0, 0, color));
               trolls.push(new Ball(x+30, y+20, 0, 0, color));
               trolls.push(new Ball(x+30, y+40, 0, 0, color));
               trolls.push(new Ball(x+30, y+60, 0, 0, color));
