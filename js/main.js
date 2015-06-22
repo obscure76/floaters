@@ -628,9 +628,10 @@ window.requestAnimFrame = (function(callback) {
       function getRandomColor() {
         var letters = '0123456789ABCDEF'.split('');
         var color = '#';
-        /*for (var i = 0; i < 6; i++ ) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }*/
+          var color1 = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color1 += letters[Math.floor(Math.random() * 16)];
+        }
         switch(Math.floor(Math.random()*4)) {
             case 0:
                 color += "3A5BCD";
@@ -645,7 +646,10 @@ window.requestAnimFrame = (function(callback) {
                 color += "02A817";
                 break;
         }
-        return color;
+        if(Math.random() > 0.3)
+            return color;
+        else
+            return color1;
       }
       
       var canvas = document.getElementById('myCanvas');
