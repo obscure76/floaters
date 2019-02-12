@@ -6,3 +6,7 @@ Instructions on usage:
 Type in some text and bouncing balls for the corresponding text is generated and your mouse movement will move the balls around. 
 
 Thanks for the tutorial.
+
+Here it is:
+http://obscure76.github.io/floaters/
+
